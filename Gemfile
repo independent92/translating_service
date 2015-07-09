@@ -35,6 +35,9 @@ end
 
 # Пользовательские гемы
   gem 'pg'
+  gem 'devise', '~> 3.2.4'
+  gem "slim-rails", "~> 2.1.0"
+  gem 'virtus'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
