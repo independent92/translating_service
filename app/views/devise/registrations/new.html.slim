@@ -1,0 +1,45 @@
+.section.service
+	.container style="height:450px" 
+		.row
+			/! Start Memebr 1
+			.col-md-2
+			.col-md-8.text-center
+				.panel.panel-default
+					.panel-heading
+						h2 Регистрация пользователя
+					.panel-body
+						/! Tab Content 1
+						#tab-1.tab-pane.fade.in.active
+							= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| 
+								= devise_error_messages! 
+								div
+									= f.label :email 
+									br 
+									= f.email_field :email, autofocus: true 
+								div
+									= f.label "Пароль" 
+									br 
+									= f.password_field :password, autocomplete: "off" 
+
+								div
+									= f.label "Подтверждение пароля"
+									br 
+									= f.password_field :password_confirmation, autocomplete: "off" 
+								div
+									= f.label "Тип пользователя" 
+									br 
+									label.radio-inline
+										= radio_button_tag 'role', '1'
+										input name="optradio" type="radio" 
+										| Заказчик
+									label.radio-inline
+										= radio_button_tag 'role', '2' 
+										| Переводчик
+								div
+									br
+									= f.submit "Подтвердить" 
+							/= render "devise/shared/links" 
+			.col-md-2
+
+
+

@@ -1,2 +1,2 @@
-class Users::SessionsController < Devise::SessionsController
+class Devise::User::SessionsController < Devise::SessionsController
 end
